@@ -1,31 +1,33 @@
 #ifndef CONTACT_HPP
-#define CONTACT_HPP
+# define CONTACT_HPP
 
 #include <iostream>
 #include <iomanip>
-#include <cstdlib>
-#define sout std::cout
-#define sin std::cin
+
 #define string std::string
-#define setw std::setw
-#define right std::right
 
-class Contact{
+class Contact {
+	private:
+		int		id;
+		string	first_name;
+		string	last_name;
+		string	nickname;
+		string	phone_number;
+		string	darkest_secret;
+	
 	public:
-		int	index;
-		string first_name;
-		string last_name;
-		string nickname;
-		string phone_number;
-		string darkest_secret;
+		void	set_id(int id);
+		void	set_first_name(string f_name);
+		void	set_last_name(string l_name);
+		void	set_nickname(string n_name);
+		void	set_phone_number(string phonenumber);
+		void	set_darkest_secret(string ds);
+		void	print_contact();
 
-	Contact(): index(1), first_name(""), last_name(""),
-		nickname(""), phone_number(""), darkest_secret("") {}
-
-	Contact(int index, string f_name, string l_name, string n_name,
-			string p_number, string d_secret)
-			: index(index), first_name(f_name), last_name(l_name), nickname(n_name),
-				phone_number(p_number), darkest_secret(d_secret) {} 
+	Contact(): id(1), first_name(""), last_name(""),
+		nickname(""), phone_number(""), darkest_secret("") {};
 };
+
+void	print_nth(string str, int n);
 
 #endif

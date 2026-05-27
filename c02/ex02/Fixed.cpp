@@ -13,7 +13,7 @@ Fixed::Fixed(const Fixed& ot) {
 Fixed::Fixed(const int i)
 {
 	cout << "Int constructor called" << endl;
-	value = i;
+	value = roundf(i * (1 << int_literal));
 }
 
 Fixed::Fixed(const float f)
