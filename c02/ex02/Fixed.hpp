@@ -1,6 +1,10 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
+#ifndef DEBUG
+# define DEBUG 0
+#endif
+
 #include <iostream>
 #include <bits/stdc++.h>
 
