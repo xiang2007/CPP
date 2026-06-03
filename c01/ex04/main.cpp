@@ -18,7 +18,7 @@ int main(int ac, char **av) {
 		return (cout << "invalid arguments\n<filename> <s1> <s2>" << endl, 1);
 	string sub = av[2];
 	string trp = av[3];
-	if (sub.empty() || trp.empty())
+	if (sub.empty())
 		return (cout << "Empty arguments" << endl, 1);
 	fstream file_in;
 	file_in.open(av[1], ios::in);

@@ -7,7 +7,7 @@ SRC = main.cpp
 NAME = sed
 
 $(NAME):
-	$(CPP) $(CPPFLAG) $(SRC) -o $(NAME)
+	$(CPP) $(CPPFLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME)
 

@@ -7,7 +7,7 @@ SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 NAME = program
 
 $(NAME):
-	$(CPP) $(CPPFLAG) $(SRC) -o $(NAME)
+	$(CPP) $(CPPFLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME)
 
