@@ -81,16 +81,15 @@ Fixed Fixed::operator-(const Fixed& l) const
 Fixed Fixed::operator*(const Fixed& l) const
 {
 	Fixed res;
-	res.setRawBits(this->getRawBits() * l.getRawBits());
+	long temp = this->getRawBits() * l.getRawBits();
+	res.setRawBits(temp >> int_literal);
 	return (res);
 }
 
 Fixed Fixed::operator/(const Fixed& l) const
 {
 	Fixed res;
-	cout << this->value << ' ' << (this->value << int_literal) << ' ' << (l.getRawBits() << int_literal) << endl;
-	cout << this->toFloat() << ' ' << l.toFloat() << endl;
-	res.setRawBits((this->value << int_literal) / (l.getRawBits() << int_literal));
+	res.setRawBits((this->getRawBits() * (1 << int_literal)) / l.getRawBits());
 	return (res);
 }
 
@@ -167,7 +166,7 @@ void	Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-	return ((float)(value / (float)(1 << int_literal)));
+	return (roundf((float)(value / (float)(1 << int_literal))));
 }
 
 int Fixed::toInt(void) const
