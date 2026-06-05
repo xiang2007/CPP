@@ -66,25 +66,31 @@ bool Fixed::operator!=(const Fixed& ot) const
 
 Fixed Fixed::operator+(const Fixed& l) const
 {
-	Fixed res(this->toFloat() + l.toFloat());
+	Fixed res;
+	res.setRawBits(this->value + l.getRawBits());
 	return (res);
 }
 
 Fixed Fixed::operator-(const Fixed& l) const
 {
-	Fixed res(this->toFloat() - l.toFloat());
+	Fixed res;
+	res.setRawBits(this->value - l.getRawBits());
 	return (res);
 }
 
 Fixed Fixed::operator*(const Fixed& l) const
 {
-	Fixed res(this->toFloat() * l.toFloat());
+	Fixed res;
+	res.setRawBits(this->getRawBits() * l.getRawBits());
 	return (res);
 }
 
 Fixed Fixed::operator/(const Fixed& l) const
 {
-	Fixed res(this->toFloat() / l.toFloat());
+	Fixed res;
+	cout << this->value << ' ' << (this->value << int_literal) << ' ' << (l.getRawBits() << int_literal) << endl;
+	cout << this->toFloat() << ' ' << l.toFloat() << endl;
+	res.setRawBits((this->value << int_literal) / (l.getRawBits() << int_literal));
 	return (res);
 }
 
