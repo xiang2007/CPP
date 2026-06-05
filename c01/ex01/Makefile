@@ -15,7 +15,6 @@ CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -rf
 
 SRC = main.cpp Zombie.cpp zombieHoard.cpp
-HEADER = Zombie.h
 
 NAME = zombie
 

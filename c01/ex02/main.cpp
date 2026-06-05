@@ -23,7 +23,8 @@ int	main()
 	std::cout << "Memery address of stringPTR is: " << &stringPTR << "\n";
 	std::cout << "Memory address of stringREF is: " << &stringREF << "\n";
 	std::cout << "Value of string is: " << str << "\n";
-	std::cout << "Value of stringPTR is: " << *stringPTR << "\n";
+	std::cout << "Value of stringPTR is: " << stringPTR << "\n";
+	std::cout << "Value pointed by stringPTR is: " << *stringPTR << "\n";
 	std::cout << "Value of stringREF is: " << stringREF << std::endl;
 	return 0;
 }

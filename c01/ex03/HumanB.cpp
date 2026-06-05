@@ -15,7 +15,7 @@ void	HumanB::setWeapon(Weapon &w)
 void	HumanB::attack(void)
 {
 	if (weapon == NULL)
-		cout << name << " Failed to attack" << endl;
+		cout << name << " attack with fist" << endl;
 	else
 		cout << name << " attack with " << weapon->getType() << endl;
 }

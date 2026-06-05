@@ -18,20 +18,18 @@
 
 #include <iostream>
 
-class Zombie{
+class Zombie {
 	private:
 		std::string name;
 	public:
 		Zombie();
-		Zombie(std::string _name);
+		Zombie(std::string name);
 		~Zombie();
 
-	void	announce(void) const {
-		sout << name << ":\t" << "BraiiiiiiinnnzzzZ..." << std::endl;
-	}
-	void	set_name(std::string _name){
-		name = _name;
-	}
+		void	announce(void) const;
+		void	set_name(std::string str);
 };
+
+Zombie*	zombieHorde(int N, std::string name);
 
 #endif
