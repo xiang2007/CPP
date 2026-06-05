@@ -27,11 +27,16 @@ int main(int ac, char **av) {
 	if (file_in.peek() == std::ifstream::traits_type::eof())
 		return (cout << "'" << av[1] << "' is a empty file" << endl, 1);
 	string s;
+	int nl = 0;
 	while (file_in.is_open()) {
 		string line;
 		while (getline(file_in, line)) {
 			s += line + "\n";
 		}
+		file_in.clear();
+		file_in.seekg(-1, ios::end);
+		if (file_in.peek() == '\n')
+			nl = 1;
 		file_in.close();
 	}
 	size_t res = -1;
@@ -46,7 +51,10 @@ int main(int ac, char **av) {
 	string out = av[1];
 	string outres = out + ".replace";
 	ofstream outfile(outres.c_str());
-	outfile << s;
+	if (nl == 0)
+		outfile << s;
+	else
+		outfile << s << endl;
 	outfile.close();
 	return 0;
 }
