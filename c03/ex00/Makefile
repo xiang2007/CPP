@@ -8,7 +8,7 @@ HEADER = ClapTrap.hpp
 NAME = ClapTrap
 
 $(NAME):
-	$(CPP) $(CPPFLAG) $(SRC) -o $(NAME)
+	$(CPP) $(CPPFLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME)
 

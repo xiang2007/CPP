@@ -9,6 +9,7 @@ ClapTrap::ClapTrap(void) {
 }
 
 ClapTrap::ClapTrap(string _name) {
+	cout << "Default constructor called" << endl;
 	name = _name;
 	hit_point = 10;
 	energy = 10;
