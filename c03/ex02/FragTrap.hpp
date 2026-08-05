@@ -6,9 +6,6 @@
 class FragTrap : public ClapTrap
 {
 	public:
-		void attack(const string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 		void highFiveGuys(void);
 
 		FragTrap(void);

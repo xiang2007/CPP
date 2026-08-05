@@ -8,7 +8,7 @@ HEADER = ClapTrap.hpp ScavTrap.hpp
 NAME = ScavTrap
 
 $(NAME):
-	$(CPP) $(CPPFLAG) $(SRC) -o $(NAME)
+	$(CPP) $(CPPFLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME)
 

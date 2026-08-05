@@ -8,8 +8,6 @@ class ScavTrap: public ClapTrap
 	public:
 		void guardGate(void);
 		void attack(const string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 
 		ScavTrap(void);
 		ScavTrap(string _name);
